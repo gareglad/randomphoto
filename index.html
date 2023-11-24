@@ -108,7 +108,8 @@ height: 115px;
         //alert(randomNumber);
         console.log(playing);
         if(!playing){
-          $('#photo').attr('src', 'photos/0 ('+randomNumber+').png');
+$('.image-container').append('<img src=photos/0 ('+randomNumber+').png+'>);
+          //$('#photo').attr('src','photos/0 ('+randomNumber+').png');
         }
        
       });
@@ -261,7 +262,7 @@ score = 0;
 setInterval(checkCollision2,50);
 
 //const audio2 = '';
-const audio2 = new Audio("Mubert.mp3");
+const audio2 = new Audio("mubert.mp3");
     $('#pause').click(function() {
         audio2.pause();
         
@@ -322,8 +323,8 @@ High Score: <span id="high_score">0</span>
   <button class="pause_game btn btn-primary">Pause Game</button>
   <button class="resume_game btn btn-primary">Resume Game</button>
   <button class="clear btn btn-primary">Clear</button>
-<button  class=" btn btn-primary" id="play">Play</button>
-    <button   class=" btn btn-primary" id="pause">Pause</button>
+<button id="play">Play</button>
+    <button id="pause">Pause</button>
     
 
 </body>
